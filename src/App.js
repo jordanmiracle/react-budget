@@ -28,13 +28,23 @@ function App() {
     },
   ];
 
-  return (
-    <div>
-      <h2>Budget Calculator</h2>
-      <Expenses items={expenses} />
-    </div>
-  )
+  //  return (
+  //    <div>
+  //      <h2>Budget Calculator</h2>
+  //      <Expenses items={expenses} />
+  //    </div>
+  //  )
+  //
+  //}
 
-}
+// This, below, is the same as above but with a different syntax //
 
-export default App;
+  return React.createElement(
+    'div',
+    {},
+    React.createElement('h2', {}, 'Budget Calculator'),
+    React.createElement(Expenses, { items: expenses })
+    );
+  };
+
+  export default App;
